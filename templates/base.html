@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    {% block title %}
+        <title>Festes FME</title>
+    {% endblock title %}
+</head>
+
+<body>
+    <header>
+        {% block header %} {% endblock header %}
+    </header>
+    <nav>
+    </nav>
+    <main>
+        {% block content %} {% endblock %}
+    </main>
+    <footer>
+        {% block footer %}
+            Trobes alguna cosa en falta? Contacta <a href="{{ config.base_url }}/contacte"">aquí</a>!
+        {% endblock footer %}
+    </footer>
+</body>
+
+</html>

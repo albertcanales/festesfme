@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>Inici | Festes FME</title>
+{% endblock title %}
+
+{% block header %}
+    <div class="title-header-outer">
+        <div class="title-header-inner">
+            <h1>{{ section.title }}</h1>
+            {% if section.description %}
+            <p>{{ section.description }}</p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock header %}
+
+{% block content %}
+    <ul>
+        {% for cpage in paginator.pages %}
+        <li><a href="{{ cpage.permalink }}">{{ cpage.date }} | {{ cpage.title }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
