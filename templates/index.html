@@ -17,8 +17,18 @@
 
 {% block content %}
     <ul>
-        {% for cpage in paginator.pages %}
-        <li><a href="{{ cpage.permalink }}">{{ cpage.date }} | {{ cpage.title }}</a></li>
+        {% set section = get_section(path="generacions/_index.md") %}
+        {% for cpage in section.pages %}
+        <li>
+            <figure>
+                <img src="/{{ cpage.slug }}/{{ cpage.extra.disseny_principal }}" class="inlineimg">
+            </figure>
+            <a href="{{ cpage.permalink }}">{{ cpage.title }}</a>
+        </li>
         {% endfor %}
     </ul>
 {% endblock content %}
+
+{% block footer %}
+    <p>Trobes alguna cosa en falta? Contacta <a href="/contacte">aquí</a>!</p>
+{% endblock footer %}
