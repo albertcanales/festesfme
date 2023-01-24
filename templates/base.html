@@ -7,22 +7,26 @@
     {% block title %}
         <title>Festes FME</title>
     {% endblock title %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/base.css">
 </head>
 
 <body>
-    <header>
-        {% block header %} {% endblock header %}
-    </header>
-    <nav>
-    </nav>
-    <main>
-        {% block content %} {% endblock %}
-    </main>
-    <footer>
-        {% block footer %}
-            <p>Torna a l'<a href="/">inici</a></p>
-        {% endblock footer %}
-    </footer>
+    <section class="section is-align-content-center has-text-centered">
+        <header>
+            {% block header %} {% endblock header %}
+        </header>
+        <br>
+        <main>
+            {% block content %} {% endblock %}
+        </main>
+        <br>
+        <footer>
+            {% block footer %}
+                <p>Torna a l'<a href="/">inici</a></p>
+            {% endblock footer %}
+        </footer>
+    </section>
 </body>
 
 </html>
