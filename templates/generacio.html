@@ -1,0 +1,37 @@
+{% extends "page.html" %}
+
+{% block content %}
+    {% if page.extra.foto_grupal is defined %}
+        <figure>
+            <img src="/{{ page.slug }}/{{ page.extra.foto_grupal }}" class="inlineimg">
+        </figure>
+    {% endif %}
+
+    <figure>
+        <img src="/{{ page.slug }}/{{ page.extra.disseny_principal }}" class="inlineimg">
+    </figure>
+
+    {% if page.extra.dissenys_alternatius is defined %}
+        {% for disseny in page.extra.dissenys_alternatius %}
+            <figure> 
+                <img src="/{{ page.slug }}/{{ page.extra.disseny }}" class="inlineimg">
+            </figure>
+        {% endfor %}
+    {% endif %}
+
+    {% if page.extra.membres is defined %}
+        <h4 class="title is-4">Integrants</h4>
+        <div class="columns is-multiline is-centered">
+            {% for membre in page.extra.membres|sort %}
+                <div class="column is-one-fifth-fullhd is-one-fifth-widescreen is-one-quarter-desktop is-one-third-tablet has-text-centered">
+                    <p class="is-centered">
+                        {{ membre }}
+                    </p>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+
+    
+{% endblock content %}

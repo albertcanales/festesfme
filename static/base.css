@@ -1,4 +1,14 @@
 /*
+General
+*/
+
+html *
+{
+  font-family: 'Ubuntu';
+}
+
+/*
+Per les cards del index
 https://responsive-bulma-cards.netlify.app/ 
 */
 
@@ -22,7 +32,7 @@ body {
 }
 
 .rounded-xl {
-  border-radius: 0.75rem !important;
+  border-radius: 1rem !important;
 }
 
 .shadow-md {

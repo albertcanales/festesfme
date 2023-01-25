@@ -1,7 +1,6 @@
 +++
 title = "Contacte"
 description = "En un lloc fosc i recòndic hi haurà un fiber mantenint aquesta web..."
-template = "contacte.html"
 +++
 
 Hola!

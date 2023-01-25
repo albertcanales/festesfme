@@ -1,45 +1,20 @@
 {% extends "base.html" %}
 
 {% block title %}
-    <title>{{ page.title }} | Festes FME</title>
+    <title>{{ page.title }} | FestesFME</title>
 {% endblock title %}
 
 {% block header %}
-    <div class="title-header-outer">
-        <div class="title-header-inner">
-            <h1>{{ page.title }}</h1>
-            <p>{{ page.description }}</p>
-        </div>
-    </div>
+    <p class="title">{{ page.title }}</p>
+    {% if page.description %}
+        <p class="subtitle">
+            {{ page.description }}
+        </p>
+    {% endif %}
 {% endblock header %}
 
 {% block content %}
-    
-
-    {% if page.extra.foto_grupal is defined %}
-        <figure>
-            <img src="/{{ page.slug }}/{{ page.extra.foto_grupal }}" class="inlineimg">
-        </figure>
-    {% endif %}
-
-    <figure>
-        <img src="/{{ page.slug }}/{{ page.extra.disseny_principal }}" class="inlineimg">
-    </figure>
-
-    {% if page.extra.dissenys_alternatius is defined %}
-        {% for disseny in page.extra.dissenys_alternatius %}
-            <figure> 
-                <img src="/{{ page.slug }}/{{ page.extra.disseny }}" class="inlineimg">
-            </figure>
-        {% endfor %}
-    {% endif %}
-
-    {% if page.extra.membres is defined %}
-        <h3>Integrants</h3>
-        <ul>
-            {% for membre in page.extra.membres|sort %}
-                <li>{{ membre }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}
+    <div class="content has-text-left">
+        {{ page.content | safe }}
+    </div>
 {% endblock content %}

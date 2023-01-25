@@ -9,6 +9,7 @@
     {% endblock title %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="/base.css">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
 </head>
 
 <body>
@@ -23,7 +24,10 @@
         <br>
         <footer>
             {% block footer %}
-                <p>Torna a l'<a href="/">inici</a></p>
+                <hr>
+                <a href="/">
+                    <button class="button is-ghost">Torna a l'inici</button>
+                </a>
             {% endblock footer %}
         </footer>
     </section>
