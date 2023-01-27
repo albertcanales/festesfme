@@ -14,11 +14,13 @@
 {% endblock header %}
 
 {% block content %}
+
     {% set section = get_section(path="generacions/_index.md") %}
     
-    <div class="columns is-multiline is-centered">
+    <div class="columns is-multiline is-centered is-vcentered">
         {% for cpage in section.pages %}
-            <div class="column is-one-third has-text-centered">
+            {% for i in [1,1,1,1,1,1,1] %}
+            <div class="column is-one-quarter-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet has-text-centered">
                 <a href="{{ cpage.permalink }}">
                     <div class="card shadow-md is-cursor-pointer transform is-duration-300 hover-shadow-xl hover-translate-y rounded-xl light-border">
                         <div class="card-image">
@@ -29,15 +31,13 @@
                             </figure>
                         </div>
                         <div class="card-content">
-                            <div class="content has-text-centered">
-                            <p class="subtitle is-4">
-                                {{ cpage.title }}
-                            </p>
-                            </div>
+                                <p class="title is-4">{{ cpage.title }}</p>
+                                <p class="subtitle is-6">{{ cpage.description }}</p>
                         </div>
                     </div>
                 </a>
             </div>
+            {% endfor %}
         {% endfor %}
     </div>
 {% endblock content %}
