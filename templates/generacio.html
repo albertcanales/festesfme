@@ -3,24 +3,38 @@
 {% block content %}
     {% if page.extra.foto_grupal is defined %}
         <figure>
-            <img src="/{{ page.slug }}/{{ page.extra.foto_grupal }}" class="inlineimg">
+            <img src="/{{ page.slug }}/{{ page.extra.foto_grupal }}">
         </figure>
     {% endif %}
 
     <figure>
-        <img src="/{{ page.slug }}/{{ page.extra.disseny_principal }}" class="inlineimg">
+        <img src="/{{ page.slug }}/{{ page.extra.disseny_principal }}">
     </figure>
 
+    <div class="content has-text-left">
+        {{ page.content | safe }}
+    </div>
+    
     {% if page.extra.dissenys_alternatius is defined %}
-        {% for disseny in page.extra.dissenys_alternatius %}
-            <figure> 
-                <img src="/{{ page.slug }}/{{ page.extra.disseny }}" class="inlineimg">
-            </figure>
-        {% endfor %}
+        <h4 class="title is-4">Dissenys alternatius</h4>
+        <div class="columns is-multiline is-centered">
+            {% for disseny in page.extra.dissenys_alternatius %}
+                <div class="column is-one-quarter-fullhd is-one-quarter-widescreen is-one-third-desktop has-text-centered">
+                    
+                    <div class="card rounded-xl light-border">
+                        <div class="card-image">
+                          <figure class="image is-square">
+                            <img style="object-fit: contain" src="/{{ page.slug }}/{{ disseny }}" alt="{{ disseny }}">
+                          </figure>
+                        </div>
+                      </div>
+                </div>
+            {% endfor %}
+        </div>
     {% endif %}
 
     {% if page.extra.membres is defined %}
-        <h4 class="title is-4">Integrants</h4>
+    <h4 class="title is-4">Integrants</h4>
         <div class="columns is-multiline is-centered">
             {% for membre in page.extra.membres|sort %}
                 <div class="column is-one-fifth-fullhd is-one-fifth-widescreen is-one-quarter-desktop is-one-third-tablet has-text-centered">

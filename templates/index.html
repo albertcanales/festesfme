@@ -20,10 +20,10 @@
         {% for cpage in section.pages %}
             <div class="column is-one-third has-text-centered">
                 <a href="{{ cpage.permalink }}">
-                    <div class="card shadow-md is-cursor-pointer transform is-duration-300 hover-shadow-xl hover-translate-y rounded-xl">
+                    <div class="card shadow-md is-cursor-pointer transform is-duration-300 hover-shadow-xl hover-translate-y rounded-xl light-border">
                         <div class="card-image">
                             <figure class="image">
-                                <figure class="image is-4by3">
+                                <figure class="image is-square">
                                     <img style="object-fit: contain" src="/{{ cpage.slug }}/{{ cpage.extra.disseny_principal }}" alt="Disseny {{ cpage.title }}">
                                 </figure>
                             </figure>
