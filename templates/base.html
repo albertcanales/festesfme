@@ -8,11 +8,13 @@
         <title>Festes FME</title>
     {% endblock title %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="/base.css">
+    <link rel="stylesheet" href="{{ get_url(path='base.css') }}">
     <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
 </head>
 
 <body>
+    {% set contacturl = get_url(path="@/contacte.md") %}
+    {% set homeurl = get_url(path="@/_index.md") %}
     <section class="section is-align-content-center has-text-centered">
         <header>
             {% block header %} {% endblock header %}
@@ -25,7 +27,7 @@
         <footer>
             {% block footer %}
                 <hr>
-                <a href="/">
+                <a href="{{ homeurl }}">
                     <button class="button is-ghost">Torna a l'inici</button>
                 </a>
             {% endblock footer %}

@@ -3,12 +3,12 @@
 {% block header %}
             <p class="title is-1">Error 404</p>
             <p class="subtitle is-5">
-                Igual que un matemàtic amb parella estable, aquesta pàgina no existeix
+                Aquesta pàgina, com el Catan de la dele, no existeix
             </p>
 {% endblock header %}
 
 {% block content %}
     <div class="content has-text-center">
-        Okay bro t'has equivocat, no passa res, a tots ens passa. Pots <a href="/">tornar a l'inici</a> o <a href="/contacte">queixar-te</a> als que porten la web
+        Okay bro t'has equivocat, no passa res, a tots ens passa. Pots <a href="{{ homeurl }}">tornar a l'inici</a> o <a href="{{ contacturl }}">queixar-te</a> als que porten la web
     </div>
 {% endblock content %}

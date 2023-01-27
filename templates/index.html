@@ -26,7 +26,7 @@
                         <div class="card-image">
                             <figure class="image">
                                 <figure class="image is-square">
-                                    <img style="object-fit: contain" src="/{{ cpage.slug }}/{{ cpage.extra.disseny_principal }}" alt="Disseny {{ cpage.title }}">
+                                    <img style="object-fit: contain" src="{{ get_url(path= cpage.slug ~ '/' ~ cpage.extra.disseny_principal) }}" alt="Disseny {{ cpage.title }}">
                                 </figure>
                             </figure>
                         </div>
@@ -44,5 +44,5 @@
 
 {% block footer %}
     <hr>
-    <p>Trobes alguna cosa en falta? Contacta <a href="/contacte">aquí</a>!</p>
+    <p>Trobes alguna cosa en falta? Contacta <a href="{{ contacturl }}">aquí</a>!</p>
 {% endblock footer %}

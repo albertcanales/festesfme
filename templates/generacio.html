@@ -7,7 +7,7 @@
             <div class="card rounded-xl light-border">
                 <div class="card-image">
                     <figure class="image is-square">
-                    <img style="object-fit: contain" src="/{{ page.slug }}/{{ page.extra.disseny_principal }}">
+                    <img style="object-fit: contain" src="{{ get_url(path= page.slug ~ '/' ~ page.extra.disseny_principal) }}">
                     </figure>
                 </div>
                 </div>
@@ -17,7 +17,7 @@
                 <div class="card light-border rounded-xl">
                     <div class="card-image">
                         <figure class="image">
-                            <img style="object-fit: contain;" class="rounded-xl" src="/{{ page.slug }}/{{ page.extra.foto_grupal }}">
+                            <img style="object-fit: contain;" class="rounded-xl" src="{{ get_url(path= page.slug ~ '/' ~ page.extra.foto_grupal) }}">
                         </figure>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                     <div class="card rounded-xl light-border">
                         <div class="card-image">
                           <figure class="image is-square">
-                            <img style="object-fit: contain" src="/{{ page.slug }}/{{ disseny }}" alt="{{ disseny }}">
+                            <img style="object-fit: contain" src="{{ get_url(path= page.slug ~ '/' ~ disseny ) }}" alt="{{ disseny }}">
                           </figure>
                         </div>
                       </div>
