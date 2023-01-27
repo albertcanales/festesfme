@@ -1,5 +1,5 @@
 +++
 title = "Festes FME"
-description = "Un petit recull històric sobre nosaltres"
+description = "🌲 Que els arbres de la FME creixin tant com els teus somnis 💭"
 +++
 

@@ -5,16 +5,21 @@
 {% endblock title %}
 
 {% block header %}
-    <p class="title">{{ page.title }}</p>
+    <p class="title is-1">{{ page.title }}</p>
     {% if page.description %}
-        <p class="subtitle">
+        <p class="subtitle is-4">
             {{ page.description }}
         </p>
     {% endif %}
 {% endblock header %}
 
 {% block content %}
-    <div class="content has-text-left">
-        {{ page.content | safe }}
+    <!-- Simular el padding amb les columnes es una mica cutre però funciona -->
+    <div class="columns is-centered">
+        <div class="column is-11">
+            <div class="content has-text-left">
+                {{ page.content | safe }}
+            </div>
+        </div>
     </div>
 {% endblock content %}
