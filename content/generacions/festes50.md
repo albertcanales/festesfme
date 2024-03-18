@@ -9,6 +9,7 @@ template = "generacio.html"
 
 [extra]
 disseny_principal = "camiseta.png"
+
 dissenys_alternatius = ["camiseta.png",
                         "camiseta.png",
                         "camiseta.png",
@@ -17,6 +18,11 @@ dissenys_alternatius = ["camiseta.png",
                         "camiseta.png",
                         "camiseta.png", 
                        ]
+
+# Link de YT al vídeo de presentació
+video_presentacio="https://www.youtube.com/embed/NPCQuSjEYdA"
+
+# Sols es mostrarà si el vídeo de presentació no està definit!!
 foto_grupal = "fotogrup.jpeg"
 membres = [ "Kurt Hahn",
             "Ben Hayden",

@@ -1,10 +1,30 @@
 {% extends "page.html" %}
 
+{% macro foto_grupal(url) %}
+    <div class="foto_grupal column has-text-centered">
+        <div class="card rounded-xl is-shadowless">
+            <div class="card-image">
+                <figure class="image">
+                    <img style="object-fit: contain;" class="rounded-xl" src="{{ url }}">
+                </figure>
+            </div>
+        </div>
+    </div>
+{% endmacro foto_grupal %}
+
+{% macro video_presentacio(url) %}
+    <div class="video_presentacio column has-text-centered">
+        <figure class="image is-16by9">
+            <iframe class="rounded-xl has-ratio" src="{{ url }}" frameborder="0" allowfullscreen></iframe>
+        </figure>
+    </div>
+{% endmacro foto_grupal %}
+
 {% block content %}
     <div class="columns is-centered is-vcentered">
         <div class="column is-1"></div>
         <div class="column is-4 has-text-centered">
-            <div class="card rounded-xl light-border">
+            <div class="card rounded-xl is-shadowless">
                 <div class="card-image">
                     <figure class="image is-square">
                     <img style="object-fit: contain" src="{{ get_url(path= page.slug ~ '/' ~ page.extra.disseny_principal) }}">
@@ -12,17 +32,17 @@
                 </div>
                 </div>
         </div>
-        {% if page.extra.foto_grupal is defined %}
-            <div class="column has-text-centered">
-                <div class="card light-border rounded-xl">
-                    <div class="card-image">
-                        <figure class="image">
-                            <img style="object-fit: contain;" class="rounded-xl" src="{{ get_url(path= page.slug ~ '/' ~ page.extra.foto_grupal) }}">
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        {% endif %}
+
+        <div class="column">
+            {% if page.extra.video_presentacio is defined %}
+                {{ self::video_presentacio(url = page.extra.video_presentacio) }}
+            {% else %}
+                {% if page.extra.foto_grupal is defined %}
+                    {{ self::foto_grupal(url = get_url(path= page.slug ~ '/' ~ page.extra.foto_grupal)) }}    
+                {% endif %}
+            {% endif %}
+        </div>
+
         <div class="column is-1"></div>
     </div>
 
@@ -38,9 +58,8 @@
         <br>
         <div class="columns is-multiline is-centered is-mobile">
             {% for disseny in page.extra.dissenys_alternatius %}
-                <div class="column is-one-quarter-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-half-mobile has-text-centered">
-                    
-                    <div class="card rounded-xl light-border">
+                <div class="column is-one-quarter-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-half-mobile has-text-centered">        
+                    <div class="card rounded-xl is-shadowless">
                         <div class="card-image">
                           <figure class="image is-square">
                             <img style="object-fit: contain" src="{{ get_url(path= page.slug ~ '/' ~ disseny ) }}" alt="{{ disseny }}">
@@ -66,6 +85,4 @@
         </div>
     {% endif %}
 
-
-    
 {% endblock content %}

@@ -1,6 +1,6 @@
 +++
 title = "Contacte"
-description = "En un lloc fosc i recòndic hi haurà un fiber mantenint aquesta web..."
+description = "En un lloc fosc i recòndit hi haurà un fiber mantenint aquesta web..."
 +++
 
 Hola!
