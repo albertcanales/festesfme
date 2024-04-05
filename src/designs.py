@@ -3,6 +3,7 @@ import os.path as path
 from PIL import Image, ImageDraw
 import shutil
 
+
 BLANK_TSHIRT = "static/blank_tshirt.png"
 BOX_POINTS = [(190, 100), (410, 400)]
 
@@ -24,13 +25,13 @@ def create_tshirt(design: str, output_file: str) -> None:
 
 	tshirt.save(output_file, "PNG")
 
-for static_item in os.listdir("static/"):
-	if path.isdir(f"static/{static_item}") and static_item.startswith("festes"):
+for generacio_dir in os.listdir("dissenys/"):
+	if path.isdir(f"dissenys/{generacio_dir}") and generacio_dir.startswith("festes"):
 
-		os.makedirs(f"static/{static_item}/samarretes", exist_ok=True)
+		os.makedirs(f"static/{generacio_dir}/samarretes", exist_ok=True)
 
-		for design in os.listdir(f"static/{static_item}/dissenys"):
+		for design in os.listdir(f"dissenys/{generacio_dir}"):
 			create_tshirt(
-				f"static/{static_item}/dissenys/{design}",
-				f"static/{static_item}/samarretes/{design}"
+				f"dissenys/{generacio_dir}/{design}",
+				f"static/{generacio_dir}/samarretes/{design}"
 			)
