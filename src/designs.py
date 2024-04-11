@@ -6,11 +6,11 @@ import logging
 import shutil
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-v', '--verbose', action='count', default=0, help="Set verbosity from 0 to 2")
+parser.add_argument('-v', '--verbose', action='store_false', help="Add debug messages")
 args = parser.parse_args()
 
 logger = logging.getLogger("designs")
-logger.setLevel((3-min(args.verbose,2))*10)
+logger.setLevel(logging.INFO if args.verbose else logging.DEBUG)
 logger_handler = logging.StreamHandler()
 logger_handler.setFormatter(logging.Formatter("%(levelname)s: %(message)s"))
 logger.addHandler(logger_handler)
