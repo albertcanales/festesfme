@@ -18,19 +18,15 @@
             <iframe class="rounded-xl has-ratio" src="{{ url }}" frameborder="0" allowfullscreen></iframe>
         </figure>
     </div>
-{% endmacro foto_grupal %}
+{% endmacro video_presentacio %}
 
 {% block content %}
     <div class="columns is-centered is-vcentered">
         <div class="column is-1"></div>
         <div class="column is-4 has-text-centered">
-            <div class="card rounded-xl is-shadowless">
-                <div class="card-image">
-                    <figure class="image is-square">
-                    <img style="object-fit: contain" src="{{ get_url(path= page.slug ~ '/' ~ page.extra.disseny_principal) }}">
-                    </figure>
-                </div>
-                </div>
+            <figure class="image is-square">
+                <img style="object-fit: contain" src="{{ get_url(path= page.slug ~ '/samarretes/' ~ page.extra.disseny_principal) }}">
+            </figure>
         </div>
 
         <div class="column">
@@ -55,17 +51,14 @@
     </div>
     
     {% if page.extra.dissenys_alternatius is defined %}
+    <h4 class="title is-3">Dissenys alternatius</h4>
         <br>
         <div class="columns is-multiline is-centered is-mobile">
             {% for disseny in page.extra.dissenys_alternatius %}
-                <div class="column is-one-quarter-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-half-mobile has-text-centered">        
-                    <div class="card rounded-xl is-shadowless">
-                        <div class="card-image">
-                          <figure class="image is-square">
-                            <img style="object-fit: contain" src="{{ get_url(path= page.slug ~ '/' ~ disseny ) }}" alt="{{ disseny }}">
-                          </figure>
-                        </div>
-                      </div>
+                <div class="column is-one-quarter-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-half-mobile has-text-centered">
+                    <figure class="image is-square">
+                        <img style="object-fit: contain" src="{{ get_url(path= page.slug ~ '/samarretes/' ~ disseny ) }}" alt="{{ disseny }}">
+                    </figure>
                 </div>
             {% endfor %}
         </div>

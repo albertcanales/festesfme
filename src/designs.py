@@ -16,7 +16,7 @@ logger_handler.setFormatter(logging.Formatter("%(levelname)s: %(message)s"))
 logger.addHandler(logger_handler)
 
 BLANK_TSHIRT = "static/blank_tshirt.png"
-BOX_POINTS = [(190, 100), (410, 400)]
+BOX_POINTS = [(190, 120), (410, 420)]
 
 
 box_origin = (BOX_POINTS[0][0], BOX_POINTS[0][1])
