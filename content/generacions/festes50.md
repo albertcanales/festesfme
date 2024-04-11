@@ -3,7 +3,7 @@ title = "Festes 50"
 description = "🍞 Panas 🍞"
 
 # Per si es vol que una generació no aparegui temporalment
-draft = false
+draft = true
 # Necessari per generar el HTML, NO CANVIAR!!!
 template = "generacio.html"
 
