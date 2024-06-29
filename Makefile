@@ -14,4 +14,4 @@ designs:
 	.venv/bin/python src/designs.py
 
 designs-debug:
-	.venv/bin/python src/designs.py -v
+	.venv/bin/python src/designs.py -vdb
