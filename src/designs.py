@@ -6,7 +6,7 @@ import logging
 import shutil
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-v", "--verbose", action="store_false", help="Add debug messages")
+parser.add_argument("-v", "--verbose", action="store_true", help="Add debug messages")
 parser.add_argument(
     "-b",
     "--print-box-bg",
@@ -22,7 +22,7 @@ parser.add_argument(
 args = parser.parse_args()
 
 logger = logging.getLogger("designs")
-logger.setLevel(logging.INFO if args.verbose else logging.DEBUG)
+logger.setLevel(logging.DEBUG if args.verbose else logging.INFO)
 logger_handler = logging.StreamHandler()
 logger_handler.setFormatter(logging.Formatter("%(levelname)s: %(message)s"))
 logger.addHandler(logger_handler)
