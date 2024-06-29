@@ -1,50 +1,53 @@
 +++
+# Aquesta generació es un placeholder amb l'únic propòsit
+# de mostrar el possible contingut que es pot assignar
+
 title = "Festes 50"
 description = "🍞 Panas 🍞"
 
-# Per si es vol que una generació no aparegui temporalment
+# Amaga la generació
 draft = true
+
 # Necessari per generar el HTML, NO CANVIAR!!!
 template = "generacio.html"
 
 [extra]
-disseny_principal = "camiseta.png"
+disseny_principal = "buida.png"
 
-dissenys_alternatius = ["camiseta.png",
-                        "camiseta.png",
-                        "camiseta.png",
-                        "camiseta.png",
-                        "camiseta.png",
-                        "camiseta.png",
-                        "camiseta.png", 
-                       ]
+dissenys_alternatius = [
+    "buida.png",
+    "buida.png",
+    "buida.png",
+]
 
 # Link de YT al vídeo de presentació
 video_presentacio="https://www.youtube.com/embed/NPCQuSjEYdA"
 
-# Sols es mostrarà si el vídeo de presentació no està definit!!
+# La foto grupal només es mostra si no hi ha vídeo de presentació
 foto_grupal = "fotogrup.jpeg"
-membres = [ "Kurt Hahn",
-            "Ben Hayden",
-            "Cassie Lyons",
-            "Sahil Fisher",
-            "Emily Gallagher",
-            "Willie Weeks",
-            "Dominic Mercado",
-            "Chelsey Ross",
-            "Mohammad Vang",
-            "Olly Livingston",
-            "Genevieve Landry",
-            "Zahraa Moon",
-            "Rohan Byrne",
-            "Howard Melton", 
-            "Savanna Solis",
-            "Kyle Doyle",
-            "Jeremy O'Neill",
-            "Lois Spencer",
-            "Keane Conway",
-            "Omari Logan",
-           ]
+
+membres = [
+    "Kurt Hahn",
+    "Ben Hayden",
+    "Cassie Lyons",
+    "Sahil Fisher",
+    "Emily Gallagher",
+    "Willie Weeks",
+    "Dominic Mercado",
+    "Chelsey Ross",
+    "Mohammad Vang",
+    "Olly Livingston",
+    "Genevieve Landry",
+    "Zahraa Moon",
+    "Rohan Byrne",
+    "Howard Melton",
+    "Savanna Solis",
+    "Kyle Doyle",
+    "Jeremy O'Neill",
+    "Lois Spencer",
+    "Keane Conway",
+    "Omari Logan",
+]
 +++
 
 Heyyyy!! 
