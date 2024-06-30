@@ -1,6 +1,7 @@
 +++
 title = "Festes 02"
 description = "🥝 Kiwis 🥝"
+date = 2002-01-01
 
 template = "generacio.html"
 

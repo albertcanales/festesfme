@@ -4,6 +4,7 @@
 
 title = "Festes 50"
 description = "🍞 Panas 🍞"
+date = 1950-01-01
 
 # Amaga la generació
 draft = true

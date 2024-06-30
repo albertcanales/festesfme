@@ -1,5 +1,6 @@
 +++
 title = "Festes 00"
+date = 2000-01-01
 
 template = "generacio.html"
 
