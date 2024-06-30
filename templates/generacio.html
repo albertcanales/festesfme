@@ -27,6 +27,13 @@
             <figure class="image is-square">
                 <img style="object-fit: contain" src="{{ get_url(path= page.slug ~ '/samarretes/' ~ page.extra.disseny_principal) }}">
             </figure>
+            {% if page.extra.disseny_principal_rev is defined %}
+                <button class="button mt-3 is-info is-outlined">
+                    <span class="icon">
+                        <i class="fa fa-refresh fa-lg"></i>
+                    </span>
+                </button>
+            {% endif %}
         </div>
 
         <div class="column">
