@@ -1,5 +1,38 @@
 {% extends "page.html" %}
 
+{% macro disseny_principal() %}
+
+    {% set img = get_url(path = page.slug ~ '/samarretes/' ~ page.extra.disseny_principal) %}
+
+    {% if page.extra.disseny_principal_rev is defined %}
+        {% set img_rev = get_url(path = page.slug ~ '/samarretes/' ~ page.extra.disseny_principal_rev) %}
+    {% else %}
+        {% set img_rev = "" %}
+    {% endif %}
+
+    <figure class="image is-square">
+        <img id="disseny-principal" style="object-fit: contain" src="{{ img }}">
+    </figure>
+    {% if img_rev != "" %}
+        <script>
+            var i = 0;
+            var img = document.getElementById("disseny-principal");
+
+            function switchDissenyPrincipal() {
+                if(++i % 2 == 1)
+                    img.src="{{ img_rev | safe }}";
+                else
+                    img.src="{{ img | safe }}";
+            }
+        </script>
+        <button class="button mt-3 is-info is-outlined" onclick="switchDissenyPrincipal();">
+            <span class="icon">
+                <i class="fa fa-refresh fa-lg"></i>
+            </span>
+        </button>
+    {% endif %}
+{% endmacro disseny_principal %}
+
 {% macro foto_grupal(url) %}
     <div class="foto_grupal column has-text-centered">
         <div class="card rounded-xl is-shadowless">
@@ -24,27 +57,7 @@
     <div class="columns is-centered is-vcentered">
         <div class="column is-1"></div>
         <div class="column is-4 has-text-centered">
-            <figure class="image is-square">
-                <img id="disseny-principal" style="object-fit: contain" src="{{ get_url(path= page.slug ~ '/samarretes/' ~ page.extra.disseny_principal) }}">
-            </figure>
-            {% if page.extra.disseny_principal_rev is defined %}
-                <script>
-                    var i = 0;
-                    var img = document.getElementById("disseny-principal");
-
-                    function switchDissenyPrincipal() {
-                        if(++i % 2 == 1)
-                            img.src="{{ get_url(path= page.slug ~ '/samarretes/' ~ page.extra.disseny_principal_rev) }}";
-                        else
-                            img.src="{{ get_url(path= page.slug ~ '/samarretes/' ~ page.extra.disseny_principal) }}";
-                    }
-                </script>
-                <button class="button mt-3 is-info is-outlined" onclick="switchDissenyPrincipal();">
-                    <span class="icon">
-                        <i class="fa fa-refresh fa-lg"></i>
-                    </span>
-                </button>
-            {% endif %}
+            {{ self::disseny_principal() }}
         </div>
 
         <div class="column">
