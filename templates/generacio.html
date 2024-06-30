@@ -56,10 +56,12 @@
 {% block content %}
     <div class="columns is-centered is-vcentered">
         <div class="column is-1"></div>
+
         <div class="column is-4 has-text-centered">
             {{ self::disseny_principal() }}
         </div>
 
+        {% if page.extra.video_presentacio is defined or page.extra.foto_grupal is defined %}
         <div class="column">
             {% if page.extra.video_presentacio is defined %}
                 {{ self::video_presentacio(url = page.extra.video_presentacio) }}
@@ -69,6 +71,7 @@
                 {% endif %}
             {% endif %}
         </div>
+        {% endif %}
 
         <div class="column is-1"></div>
     </div>
