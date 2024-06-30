@@ -1,6 +1,6 @@
 +++
 title = "Festes 02"
-description = "🥝 Kiwis 🥝"
+# description = "🥝 Kiwis 🥝"
 date = 2002-01-01
 
 template = "generacio.html"
@@ -11,6 +11,7 @@ disseny_principal = "fighter.png"
 dissenys_alternatius = [
     "apocalipschitz.png",
     "acab.png",
+    "prettygirls_back.png"
 ]
 
 video_presentacio="https://youtube.com/embed/kmhAsmu-_Ek"
