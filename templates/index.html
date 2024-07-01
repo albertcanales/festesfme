@@ -17,7 +17,7 @@
 
     {% set section = get_section(path="generacions/_index.md") %}
     
-    <div class="columns is-multiline is-centered is-vcentered">
+    <div class="columns is-multiline is-centered is-vcentered mx-4">
         {% for cpage in section.pages %}
             <div class="column is-one-quarter-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet has-text-centered">
                 <a href="{{ cpage.permalink }}">

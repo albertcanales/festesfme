@@ -14,6 +14,7 @@ template = "generacio.html"
 
 [extra]
 disseny_principal = "buida.png"
+disseny_principal_rev = "buida_back.png"
 
 dissenys_alternatius = [
     "buida.png",
