@@ -8,4 +8,30 @@ template = "generacio.html"
 disseny_principal = "rao_back.png"
 disseny_principal_rev = "rao_heart.png"
 
+foto_grupal = "carnestoltes.jpeg"
+
+membres = [
+	"Clàudia Ramírez",
+	"Damià Noguera",
+	"David Lecumberri",
+	"Elena de Paz",
+	"Elisabet Alzuria",
+	"Gerard Palomino",
+	"Javi Rodríguez",
+	"Joan Vila",
+	"Joana Pech",
+	"Judit Moner",
+	"Júlia Muñoz",
+	"Leila Kerroum",
+	"Leonardo Costa",
+	"Marc Farrés",
+	"Mario Peña",
+	"Pau Mas",
+	"Paula Benítez",
+	"Robert Sílvia",
+	"Ruth Mora",
+	"Sofía De Pedro",
+	"Óscar Pérez",
+]
+
 +++
