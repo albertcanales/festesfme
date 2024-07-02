@@ -7,10 +7,6 @@ template = "generacio.html"
 [extra]
 disseny_principal = "semafor.png"
 
-dissenys_alternatius = [
-    "exists.png",
-]
-
 membres = [
     "Ana Garcia",
     "Belén Alastruey",
