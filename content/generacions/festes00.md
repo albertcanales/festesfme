@@ -5,7 +5,7 @@ date = 2000-01-01
 template = "generacio.html"
 
 [extra]
-disseny_principal = "xi_full.png"
+disseny_principal = "xi.png"
 
 dissenys_alternatius = [
     "rolle.png",

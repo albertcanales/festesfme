@@ -11,6 +11,7 @@ dissenys_alternatius = [
     "godown.png",
     "lickballs.png",
     "volta.png",
+    "cos.png"
 ]
 
 video_presentacio="https://youtube.com/embed/dPBC58gtUxQ"
