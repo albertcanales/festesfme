@@ -2,14 +2,10 @@
 title = "Festes 95"
 date = 1995-01-01
 
-# Activar quan es tingui el disseny principal
-draft = true
-
 template = "generacio.html"
 
 [extra]
-# Creiem que és el del puzzle de Epsilon - Delta
-disseny_principal = ""
+disseny_principal = "puzzle.png"
 
 membres = [
     "Adrià",
