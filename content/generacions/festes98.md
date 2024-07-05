@@ -7,6 +7,8 @@ template = "generacio.html"
 [extra]
 disseny_principal = "semafor.png"
 
+video_presentacio="https://youtube.com/embed/ESsmgfyFOF4"
+
 membres = [
     "Ana Garcia",
     "Belén Alastruey",
