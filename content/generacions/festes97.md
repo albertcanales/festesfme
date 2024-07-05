@@ -2,14 +2,10 @@
 title = "Festes 97"
 date = 1997-01-01
 
-# Activar quan es tingui el disseny principal
-draft = true
-
 template = "generacio.html"
 
 [extra]
-# Creiem que és la del 0 natural (Hamlet)
-disseny_principal = ""
+disseny_principal = "tobeornottobe_heart.png"
 
 membres = [
     "Aina",

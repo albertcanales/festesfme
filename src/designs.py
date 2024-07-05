@@ -35,7 +35,7 @@ BLANK_TSHIRT_BACK = "static/blank_tshirt_back.png"
 
 BOX_POINTS_FRONT = [(232, 200), (647, 800)]
 BOX_POINTS_BACK = [(232, 200), (647, 800)]
-BOX_POINTS_HEART = [(500, 220), (647, 300)]
+BOX_POINTS_HEART = [(500, 220), (647, 350)]
 
 blank_tshirt_front = Image.open(BLANK_TSHIRT_FRONT).convert("RGBA")
 blank_tshirt_back = Image.open(BLANK_TSHIRT_BACK).convert("RGBA")
