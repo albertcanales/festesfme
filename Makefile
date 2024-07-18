@@ -10,6 +10,9 @@ install:
 	python -m venv .venv
 	.venv/bin/pip install -r requirements.txt
 
+zip:
+	cd public/ && zip -r ../festes.zip *
+
 designs:
 	.venv/bin/python src/designs.py
 
