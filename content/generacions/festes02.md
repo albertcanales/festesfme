@@ -23,7 +23,7 @@ membres = [
     "Albert López",
     "Albert Majó",
     "Àlvaro Acitores",
-    "Anna Bernades",
+    "Anna Bernadas",
     "Bernat Coderch",
     "Berta Martí",
     "Damià Canyameres",

@@ -26,12 +26,12 @@ membres = [
 	"Leonardo Costa",
 	"Marc Farrés",
 	"Mario Peña",
+	"Óscar Pérez",
 	"Pau Mas",
 	"Paula Benítez",
-	"Robert Sílvia",
+	"Robert Soliva",
 	"Ruth Mora",
 	"Sofía De Pedro",
-	"Óscar Pérez",
 ]
 
 +++
