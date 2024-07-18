@@ -15,3 +15,6 @@ designs:
 
 designs-debug:
 	.venv/bin/python src/designs.py -vdb
+
+designs-clean:
+	rm -rf static/festes*/samarretes
