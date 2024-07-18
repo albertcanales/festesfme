@@ -161,7 +161,7 @@ for generacio_dir in os.listdir("dissenys/"):
     if path.isdir(f"dissenys/{generacio_dir}") and generacio_dir.startswith("festes"):
         logger.info(f"Found generació in { generacio_dir }")
 
-        logger.info(f"Creating camisetes directory for generacio { generacio_dir }")
+        logger.info(f"Creating samarretes directory for generacio { generacio_dir }")
         os.makedirs(f"static/{generacio_dir}/samarretes", exist_ok=True)
 
         logger.info(f"Scanning dissenys for generació { generacio_dir }")
