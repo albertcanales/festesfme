@@ -10,7 +10,7 @@ install:
 	python -m venv .venv
 	.venv/bin/pip install -r requirements.txt
 
-zip:
+zip: build
 	cd public/ && zip -r ../festes.zip *
 
 designs:
@@ -19,5 +19,10 @@ designs:
 designs-debug:
 	.venv/bin/python src/designs.py -vdb
 
-designs-clean:
+clean-designs:
 	rm -rf static/festes*/samarretes
+
+clean-zip:
+	rm festes.zip
+
+clean: clean-designs clean-zip
