@@ -8,6 +8,11 @@ template = "generacio.html"
 disseny_principal = "rao_back.png"
 disseny_principal_rev = "rao_heart.png"
 
+dissenys_alternatius = [
+    "team_algebra_back.png",
+    "team_calculus_back.png",
+]
+
 foto_grupal = "carnestoltes.jpeg"
 
 membres = [
