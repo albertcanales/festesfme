@@ -1,9 +1,11 @@
-# Web FestesFME
+# Festes FME Website
 
-L'objectiu de la web és mantenir un històric dels dissenys i els membres de cada generació de Festes de la FME.
+Source code of the [Festes FME Website](apps.dafme.upc.edu/festes).
 
-La web està feta amb [Zola](https://www.getzola.org/), un SSG (Static Site Generator) bastant simple. Per l'estil del HTML s'utilitza [Bulma](https://bulma.io/), un framework CSS que és també molt senzillet.
+The website has three main goals:
 
-No et preocupis si no entens el paràgraf anterior, no et farà falta per afegir contingut a la web. Tota la web està muntada perquè, pràcticament, l'única feina a fer sigui canviar "Festes N" per "Festes N+1" i pujar les imatges dels vostres dissenys. Explico com fer-ho [aquí]() (encara no està fet).
+1. Showcase the historical record of Festes FME designs.
+2. Display the people who made possible each generation of the commission.
+3. Store a private repository with the original designs for future reprints.
 
-Si en canvi tens interès en modificar la web més a fons, també explico una mica com està muntat [aquí]() (encara no està fet).
+The website is made in [Zola](https://www.getzola.org/), a simple SSG (Static Site Generator). The styling is done with [Bulma](https://bulma.io/), CSS framework also chosen for its simplicity.
