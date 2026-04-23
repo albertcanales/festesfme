@@ -1,10 +1,12 @@
+ZOLA_VERSION=v0.19.1
+
 default: build
 
 serve:
-	zola serve
+	docker run -u "$$(id -u):$$(id -g)" -v $$PWD:/app --workdir /app -p 1111:1111 ghcr.io/getzola/zola:$(ZOLA_VERSION) serve --interface 0.0.0.0 --base-url localhost
 
 build:
-	zola build
+	docker run -u "$$(id -u):$$(id -g)" -v $$PWD:/app --workdir /app ghcr.io/getzola/zola:v0.19.1 build
 
 install:
 	python -m venv .venv
