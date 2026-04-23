@@ -1,9 +1,10 @@
-import os
-import os.path as path
-from PIL import Image, ImageDraw
 import argparse
 import logging
+import os
+import os.path as path
 import shutil
+
+from PIL import Image, ImageDraw
 
 Point = tuple[int, int]
 Size = tuple[int, int]
@@ -33,6 +34,8 @@ logger.addHandler(logger_handler)
 BLANK_TSHIRT_FRONT = "static/blank_tshirt_front.png"
 BLANK_TSHIRT_BACK = "static/blank_tshirt_back.png"
 
+# DO NOT CHANGE!!! You will break positioning in all existing T-shirts
+# Instead, add padding into your current design.
 BOX_POINTS_FRONT = [(232, 200), (647, 800)]
 BOX_POINTS_BACK = [(232, 200), (647, 800)]
 BOX_POINTS_HEART = [(500, 220), (647, 350)]
@@ -75,15 +78,15 @@ def add_design_to_tshirt(tshirt: Image, design: Image, box_points: tuple[Point, 
 
     box_origin = get_box_origin(box_points)
     box_size = get_box_size(box_points)
-    logger.debug(f"Box origin: { box_origin }")
-    logger.debug(f"Box size: { box_size }")
+    logger.debug(f"Box origin: {box_origin}")
+    logger.debug(f"Box size: {box_size}")
 
     design_in_box_size = get_design_in_box_size(design.size, box_size)
-    logger.debug(f"Design size: { design_in_box_size }")
+    logger.debug(f"Design size: {design_in_box_size}")
     design_in_box_origin = get_design_in_box_origin(
         design_in_box_size, box_origin, box_size
     )
-    logger.debug(f"Design origin: { design_in_box_origin }")
+    logger.debug(f"Design origin: {design_in_box_origin}")
 
     if args.print_design_bg:
         logger.info("Printing design orange rectangle into tshirt")
@@ -107,11 +110,11 @@ def _create_tshirt_generic(
     box_points: tuple[Point, Point],
 ):
     tshirt = template_tshirt.copy()
-    design = Image.open(f"{ src_dir }/{ design_file }").convert("RGBA")
+    design = Image.open(f"{src_dir}/{design_file}").convert("RGBA")
 
     add_design_to_tshirt(tshirt, design, box_points)
 
-    logger.info(f"Saving t-shirt with design to { output_file }")
+    logger.info(f"Saving t-shirt with design to {output_file}")
     tshirt.save(output_file, "PNG")
 
 
@@ -139,34 +142,34 @@ def create_tshirt(src_dir: str, design_file: str, output_file: str) -> None:
 
     if len(splitted_basename) == 2:
         _, suffix = splitted_basename
-        logger.debug(f"Found suffix {suffix} on design { design_file }")
+        logger.debug(f"Found suffix {suffix} on design {design_file}")
         if suffix == "back":
-            logger.debug(f"Design { design_file } is type BACK")
+            logger.debug(f"Design {design_file} is type BACK")
             create_tshirt_back(src_dir, design_file, output_file)
         elif suffix == "heart":
-            logger.debug(f"Design { design_file } is type HEART")
+            logger.debug(f"Design {design_file} is type HEART")
             create_tshirt_heart(src_dir, design_file, output_file)
         else:
-            logger.debug(f"Design { design_file } is type FRONT")
+            logger.debug(f"Design {design_file} is type FRONT")
             create_tshirt_front(src_dir, design_file, output_file)
     else:
-        logger.debug(f"No suffix found on design { design_file }")
-        logger.debug(f"Design { design_file } is type FRONT")
+        logger.debug(f"No suffix found on design {design_file}")
+        logger.debug(f"Design {design_file} is type FRONT")
         create_tshirt_front(src_dir, design_file, output_file)
 
 
 logger.info("Scanning generacions in 'dissenys/'")
 for generacio_dir in os.listdir("dissenys/"):
-    logger.info(f"Checking if { generacio_dir } is generació")
+    logger.info(f"Checking if {generacio_dir} is generació")
     if path.isdir(f"dissenys/{generacio_dir}") and generacio_dir.startswith("festes"):
-        logger.info(f"Found generació in { generacio_dir }")
+        logger.info(f"Found generació in {generacio_dir}")
 
-        logger.info(f"Creating samarretes directory for generacio { generacio_dir }")
+        logger.info(f"Creating samarretes directory for generacio {generacio_dir}")
         os.makedirs(f"static/{generacio_dir}/samarretes", exist_ok=True)
 
-        logger.info(f"Scanning dissenys for generació { generacio_dir }")
+        logger.info(f"Scanning dissenys for generació {generacio_dir}")
         for design in os.listdir(f"dissenys/{generacio_dir}"):
-            logger.info(f"Creating t-shirt out of design { design }")
+            logger.info(f"Creating t-shirt out of design {design}")
             create_tshirt(
                 f"dissenys/{generacio_dir}",
                 f"{design}",

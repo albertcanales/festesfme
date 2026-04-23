@@ -7,12 +7,12 @@ Hola!
 
 Ets d'una generació antiga i voldries afegir més informació? Has trobat un bug que farà caure Internet i vols avisar-nos amb antelació? Simplement t'ho passes bé enviant mails aleatoris? En qualsevol cas, pots contactar amb nosaltres!
 
-*Mantainer* actual de la web:
+_Mantainer_ actual de la web:
 
-- Albert Canales (Festes 02). [albert.canales@estudiantat.upc.edu](mailto:albert.canales@estudiantat.upc.edu)
+- Matías Mora (Festes 05). [matiasmoramolina17@gmail.com](mailto:matiasmoramolina17@gmail.com)
 
-*Maintainers* anteriors:
+_Maintainers_ anteriors:
 
-- Ningú :(
+- Albert Canales (Festes 02). [contact@albertcanales.com](mailto:contact@albertcanales.com)
 
-També tens el codi font de la web [aquí](https://github.com/albertcanales/festesfme). Si ets prou friki estàs més que invitat a contribuir-hi!
+També tens el codi font de la web [aquí](https://github.com/albertcanales/festesfme). Estàs més que invitat a contribuir-hi!
