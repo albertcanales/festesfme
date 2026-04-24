@@ -16,6 +16,15 @@ La web està feta amb [Zola](https://www.getzola.org/), un SSG (Static Site Gene
 - Clona el repositori privat amb els dissenys originals al directori `dissenys`: `git clone git@github.cgit clone git@github.com:albertcanales/festesfme-dissenys.git dissenys`
 - Instal·la les dependències pel generador de samarretes: `make install`.
 
+## Executar la Web en Local
+
+1. Genera les samarretes a partir dels dissenys: `make designs`.
+2. Engega el servidor local de la web: `make serve`.
+   - Només accessible en local, no es fa servir en producció.
+   - S'encarrega de recarregar automàticament la web quan facis canvis als `.md`.
+
+Per pujar la web al servidor de Festes, llegeix el README del repositori privat.
+
 ## Afegir una Generació
 
 Hi ha una generació d'exemple disponible a `content/generacions/festes50.md`. Copia el fitxer a `content/generacions/festesXX.md`, on _XX_ denota l'any de la teva generació. El fitxer té comentaris explicant tots els camps
@@ -53,8 +62,6 @@ Les regles per les dimensions i posició del disseny dins de la _box_ són:
 
 Exemple: En el disseny de _Festes 91_, el generador per defecte posava el disseny massa amunt. S'ha afegit espai en blanc al disseny original perquè quedi més avall.
 
-Pensa a tornar a executar `make designs` / `make designs-debug` cada cop que modifiquis el disseny per actualitzar-lo a la web.
-
-POSICIÓ
+Pensa a tornar a executar `make designs` (o bé `make designs-debug`) cada cop que modifiquis el disseny per actualitzar-lo a la web.
 
 **Quan acabis, no t'oblidis de commitejar els repos de dissenys i el de la web, s'han de fer els dos per separat!!**
