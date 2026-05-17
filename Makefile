@@ -13,7 +13,7 @@ install:
 	.venv/bin/pip install -r requirements.txt
 
 zip: build
-	cd public/ && zip -r ../festes.zip *
+	cd public/ && rm ../festes.zip && zip -r ../festes.zip *
 
 designs:
 	.venv/bin/python src/designs.py

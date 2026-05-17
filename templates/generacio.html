@@ -48,7 +48,7 @@
 {% macro video_presentacio(url) %}
     <div class="video_presentacio column has-text-centered">
         <figure class="image is-16by9">
-            <iframe class="rounded-xl has-ratio" src="{{ url }}" frameborder="0" allowfullscreen></iframe>
+            <iframe class="rounded-xl has-ratio" src="{{ url }}" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </figure>
     </div>
 {% endmacro video_presentacio %}
